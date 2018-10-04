@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MicrosservicoAdministrativo</name>
+    </assembly>
+    <members>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.EmpresaController.Listar">
+            <summary>
+            Lista todas as empresas cadastradas na base
+            </summary>
+            <returns>Lista de empresas requerida.</returns>
+            <response code="200">Lista das empresas retornada com sucesso.</response>
+            <response code="404">Lista das empresas não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.EmpresaController.Listar(System.Guid)">
+            <summary>
+            Lista as informações de uma empresa através do seu Id
+            </summary>
+            <param name="id">Id da empresa</param>
+            <returns>Empresa requerida.</returns>
+            <response code="200">Empresa retornada com sucesso.</response>
+            <response code="404">Empresa não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.EmpresaController.Inserir(MicrosservicoAdministrativo.Data.Models.Empresa)">
+            <summary>
+            Insere uma empresa na base
+            </summary>
+            <param name="novaEmpresa">Empresa a ser inserida</param>
+            <returns>Empresa criada.</returns>
+            <response code="201">Empresa criada com sucesso.</response>
+            <response code="400">Empresa é inválida.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.EmpresaController.Atualizar(System.Guid,MicrosservicoAdministrativo.Data.Models.Empresa)">
+            <summary>
+            Atualiza as informações de uma empresa através do seu Id
+            </summary>
+            <param name="id">Id da empresa</param>
+            <param name="empresaASerAlterada">Informações da empresa a serem atualizadas</param>
+            <returns>Empresa atualizada.</returns>
+            <response code="204">Empresa atualizada com sucesso.</response>
+            <response code="404">Empresa não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.EmpresaController.Excluir(System.Guid)">
+            <summary>
+            Exclui uma empresa da base através do seu Id
+            </summary>
+            <param name="id">Id da empresa</param>
+            <returns>Empresa excluída.</returns>
+            <response code="204">Empresa excluída com sucesso.</response>
+            <response code="404">Empresa não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilController.Listar">
+            <summary>
+            Lista todos os perfis cadastrados na base
+            </summary>
+            <returns>Lista de perfis requerida.</returns>
+            <response code="200">Lista de perfis retornada com sucesso.</response>
+            <response code="404">Lista de perfis não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilController.Listar(System.Guid)">
+            <summary>
+            Lista as informações de um perfil através do seu Id
+            </summary>
+            <param name="id">Id do perfil</param>
+            <returns>Perfil requerido.</returns>
+            <response code="200">Perfil retornado com sucesso.</response>
+            <response code="404">Perfil não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilController.Inserir(MicrosservicoAdministrativo.Data.Models.Perfil)">
+            <summary>
+            Insere um perfil na base
+            </summary>
+            <param name="novoPerfil">Perfil a ser inserido</param>
+            <returns>Perfil criado.</returns>
+            <response code="201">Perfil criado com sucesso.</response>
+            <response code="400">Perfil é inválido.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilController.Atualizar(System.Guid,MicrosservicoAdministrativo.Data.Models.Perfil)">
+            <summary>
+            Atualiza as informações de um perfil através do seu Id
+            </summary>
+            <param name="id">Id do perfil</param>
+            <param name="perfilASerAlterado">Informações do perfil a serem atualizadas</param>
+            <returns>Perfil atualizado.</returns>
+            <response code="204">Perfil atualizado com sucesso.</response>
+            <response code="404">Perfil não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilController.Excluir(System.Guid)">
+            <summary>
+            Exclui um perfil da base através do seu Id
+            </summary>
+            <param name="id">Id do perfil</param>
+            <returns>Perfil excluído.</returns>
+            <response code="204">Perfil excluído com sucesso.</response>
+            <response code="404">Perfil não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilUsuarioController.Listar">
+            <summary>
+            Lista todos os usuários com perfis associados
+            </summary>
+            <returns>Lista de usuários com perfis associados requerida.</returns>
+            <response code="200">Lista de usuários com perfis associados retornada com sucesso.</response>
+            <response code="404">Lista de usuários com perfis associados não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilUsuarioController.Listar(System.Guid)">
+            <summary>
+            Lista as informações de um perfil específico do usuário através do seu Id
+            </summary>
+            <param name="id">Id da associação perfil-usuário</param>
+            <returns>Perfil associado ao usuário requerido.</returns>
+            <response code="200">Perfil associado ao usuário retornado com sucesso.</response>
+            <response code="404">Perfil associado ao usuário não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilUsuarioController.Inserir(MicrosservicoAdministrativo.Data.Models.PerfilUsuario)">
+            <summary>
+            Associa um perfil à um usuário na base
+            </summary>
+            <param name="novaAssociacao">Perfil a ser associado ao usuário</param>
+            <returns>Associação de perfil ao usuário criada.</returns>
+            <response code="201">Perfil associado ao usuário com sucesso.</response>
+            <response code="400">Perfil associado ao usuário é inválido.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.PerfilUsuarioController.Excluir(System.Guid)">
+            <summary>
+            Deassocia um perfil de um usuário na base
+            </summary>
+            <param name="id">Id do perfil a ser desassociado do usuário</param>
+            <returns>Perfil desassociado do usuário.</returns>
+            <response code="204">Perfil desassociado do usuário com sucesso.</response>
+            <response code="404">Perfil associado ao usuário não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.TipoEmpresaController.Listar">
+            <summary>
+            Lista todos os tipos de empresa cadastrados na base
+            </summary>
+            <returns>Lista de tipos de empresa requerida.</returns>
+            <response code="200">Lista dos tipos de empresa retornada com sucesso.</response>
+            <response code="404">Lista dos tipos de empresa não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.TipoEmpresaController.Listar(System.Guid)">
+            <summary>
+            Lista as informações de um tipo de empresa através do seu Id
+            </summary>
+            <param name="id">Id do tipo de empresa</param>
+            <returns>Tipo de empresa requerido.</returns>
+            <response code="200">Tipo de empresa retornado com sucesso.</response>
+            <response code="404">Tipo de empresa não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.TipoEmpresaController.Inserir(MicrosservicoAdministrativo.Data.Models.TipoEmpresa)">
+            <summary>
+            Insere um tipo de empresa na base
+            </summary>
+            <param name="novoTipoEmpresa">Tipo de empresa a ser inserido</param>
+            <returns>Tipo de empresa criado.</returns>
+            <response code="201">Tipo de empresa criado com sucesso.</response>
+            <response code="400">Tipo de empresa é inválido.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.TipoEmpresaController.Atualizar(System.Guid,MicrosservicoAdministrativo.Data.Models.TipoEmpresa)">
+            <summary>
+            Atualiza as informações de um tipo de empresa através do seu Id
+            </summary>
+            <param name="id">Id do tipo de empresa</param>
+            <param name="tipoEmpresaASerAlterado">Informações do tipo de empresa a serem atualizadas</param>
+            <returns>Tipo de empresa atualizado.</returns>
+            <response code="204">Tipo de empresa atualizado com sucesso.</response>
+            <response code="404">Tipo de empresa não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.TipoEmpresaController.Excluir(System.Guid)">
+            <summary>
+            Exclui um tipo de empresa da base através do seu Id
+            </summary>
+            <param name="id">Id do tipo de empresa</param>
+            <returns>Tipo de empresa excluído.</returns>
+            <response code="204">Tipo de empresa excluído com sucesso.</response>
+            <response code="404">Tipo de empresa não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.UsuarioController.Listar">
+            <summary>
+            Lista todos os usuários cadastrados na base
+            </summary>
+            <returns>Lista de usuários requerida.</returns>
+            <response code="200">Lista de usuários retornada com sucesso.</response>
+            <response code="404">Lista dos usuários não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.UsuarioController.Listar(System.Guid)">
+            <summary>
+            Lista as informações de um usuário através do seu Id
+            </summary>
+            <param name="id">Id do usuário</param>
+            <returns>Usuário requerido.</returns>
+            <response code="200">Usuário retornado com sucesso.</response>
+            <response code="404">Usuário não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.UsuarioController.Inserir(MicrosservicoAdministrativo.Data.Models.Usuario)">
+            <summary>
+            Insere um usuário na base
+            </summary>
+            <param name="novoUsuario">Usuário a ser inserido</param>
+            <returns>Usuário criado.</returns>
+            <response code="201">Usuário criado com sucesso.</response>
+            <response code="400">Usuário é inválido.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.UsuarioController.Atualizar(System.Guid,MicrosservicoAdministrativo.Data.Models.Usuario)">
+            <summary>
+            Atualiza as informações de um usuário através do seu Id
+            </summary>
+            <param name="id">Id do usuário</param>
+            <param name="usuarioASerAlterado">Informações do usuário a serem atualizadas</param>
+            <returns>Usuário atualizado.</returns>
+            <response code="204">Usuário atualizado com sucesso.</response>
+            <response code="404">Usuário não existe.</response>
+        </member>
+        <member name="M:MicrosservicoAdministrativo.V1.Controllers.UsuarioController.Excluir(System.Guid)">
+            <summary>
+            Exclui um usuário da base através do seu Id
+            </summary>
+            <param name="id">Id do usuário</param>
+            <returns>Usuário excluído.</returns>
+            <response code="204">Usuário excluído com sucesso.</response>
+            <response code="404">Usuário não existe.</response>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\V1\EmpresaControllerTest.cs" />
+    <Compile Remove="Controllers\V1\PerfilControllerTest.cs" />
+    <Compile Remove="Controllers\V1\PerfilUsuarioControllerTest.cs" />
+    <Compile Remove="Controllers\V1\TipoEmpresaControllerTest.cs" />
+    <Compile Remove="Controllers\V1\UsuarioControllerTest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.4.2" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.1.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicrosservicoAdministrativo\MicrosservicoAdministrativo.csproj" />
+  </ItemGroup>
+
+</Project>
